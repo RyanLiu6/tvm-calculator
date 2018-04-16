@@ -3,6 +3,7 @@
 const Utils = require("./utils");
 
 module.exports = function(app, db) {
+  /*
   const P_to_F = db.collection(Utils.F_P);
   const F_to_P = db.collection(Utils.P_F);
 
@@ -15,12 +16,14 @@ module.exports = function(app, db) {
   const G_to_P = db.collection(Utils.P_G);
 
   const GG_to_P = db.collection(Utils.P_GG);
+  */
 
 /******************************************************************************/
   app.put("/money", (req, res) => {
     const jsonData = req.body;
     const ratio = Utils.calcRatio(jsonData);
-
-    res.send(ratio);
+    var result = {}
+    result.ratio = ratio
+    res.send(result);
   });
 };
