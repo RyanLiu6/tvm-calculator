@@ -1,0 +1,34 @@
+{
+  "name": "tvmcalc",
+  "version": "1.0.0",
+  "description": "TVM Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanLiu6/TVM.git"
+  },
+  "keywords": [
+    "REST",
+    "Time",
+    "Value",
+    "Of",
+    "Money"
+  ],
+  "author": "Ryan Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanLiu6/TVM/issues"
+  },
+  "homepage": "https://github.com/RyanLiu6/TVM#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
