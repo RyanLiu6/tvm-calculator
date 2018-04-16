@@ -60,11 +60,11 @@ function P_to_F(i, n) {
 }
 
 function F_to_P(i, n) {
-  return (1 + i)**(-n);
+  return Math.pow(1 + i, -n);
 }
 
 function F_to_A(i, n) {
-  top = (1 + i)**n - 1;
+  top = Math.pow(1 + i, n) - 1;
   bot = i;
 
   return top/bot;
@@ -72,45 +72,45 @@ function F_to_A(i, n) {
 
 function A_to_F(i, n) {
   top = i;
-  bot = (1 + i)**n - 1;
+  bot = Math.pow(1 + i, n) - 1;
 
   return top/bot;
 }
 
 function P_to_A(i, n) {
-  top = (1 + i)**n - 1;
-  bot = i*(1 + i)**n;
+  top = Math.pow(1 + i, n) - 1;
+  bot = i*Math.pow(1 + i, n);
 
   return top/bot;
 }
 
 function A_to_P(i, n) {
-  top = i*(1 + i)**n;
-  bot = (1 + i)**n - 1;
+  top = i*Math.pow(1 + i, n);
+  bot = Math.pow(1 + i, n) - 1;
 
   return top/bot;
 }
 
 function G_to_A(i, n) {
-  top = (1 + i)**n - i*n - 1;
-  bot = i*(1 + i)**n - i;
+  top = Math.pow(1 + i, n) - i*n - 1;
+  bot =i*Math.pow(1 + i, n) - i;
 
   return top/bot;
 }
 
 function G_to_P(i, n) {
-  top = (1 + i)**n - i*n - 1;
-  bot = i*i*(1 + i)**n;
+  top = Math.pow(1 + i, n) - i*n - 1;
+  bot = i*i*Math.pow(1 + i, n);
 
   return top/bot;
 }
 
 function GA_to_P(i, g, n) {
   if (i == g) {
-    return n*(1 + i)**(-1);
+    return n*Math.pow(1 + i, -1);
   }
   else {
-    top = 1 - (1 + i)**(-1)*(1 + g)**(n);
+    top = 1 - Math.pow(1 + i, -1)*Math.pow(1 + g, n);
     bot = i - g;
 
     return top/bot;
