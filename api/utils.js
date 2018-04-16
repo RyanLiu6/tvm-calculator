@@ -1,5 +1,5 @@
 
-case errMsg = { "Error" : "An error has occured" };
+const errMsg = { "Error" : "An error has occured" };
 
 const F_P = "F/P";
 const P_F = "P/F";
@@ -25,7 +25,7 @@ exports.getObjCallback = function(res, err, output) {
   }
 };
 
-exports.calcRatio(jsonData) {
+exports.calcRatio = function(jsonData) {
   type = jsonData["type"];
   interest = jsonData["interest"];
   period = jsonData["period"];
@@ -56,7 +56,7 @@ exports.calcRatio(jsonData) {
 }
 
 function P_to_F(i, n) {
-  return (1 + i)**n;
+  return Math.pow(1 + i, n);
 }
 
 function F_to_P(i, n) {
