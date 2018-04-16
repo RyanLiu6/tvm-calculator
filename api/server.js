@@ -1,9 +1,9 @@
 // server.js
 
 const express        = require("express");
+const app            = express();
 const bodyParser     = require("body-parser");
 const routes         = require("./routes")(app);
-const app            = express();
 
 const port = 3030;
 
