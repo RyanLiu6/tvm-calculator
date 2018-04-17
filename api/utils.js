@@ -12,7 +12,7 @@ const A_P = "A/P";
 const A_G = "A/G";
 const P_G = "P/G";
 
-const P_GG = "P/GG";
+const P_AG = "P/AG";
 
 exports.getObjCallback = function(res, err, output) {
   if (err) {
@@ -50,8 +50,8 @@ exports.calcRatio = function(jsonData) {
     case "P/G":
       return G_to_P(interest, period);
 
-    case "P/GG":
-      return GG_to_P(interest, jsonData["Geometric"], period);
+    case "P/AG":
+      return GA_to_P(interest, jsonData["geometric"], period);
   }
 }
 
@@ -110,7 +110,7 @@ function GA_to_P(i, g, n) {
     return n*Math.pow(1 + i, -1);
   }
   else {
-    top = 1 - Math.pow(1 + i, -1)*Math.pow(1 + g, n);
+    top = 1 - Math.pow(1 + g, n)*Math.pow(1 + i, -n);
     bot = i - g;
 
     return top/bot;
