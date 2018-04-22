@@ -1,19 +1,6 @@
 
 const errMsg = { "Error" : "An error has occured" };
 
-const F_P = "F/P";
-const P_F = "P/F";
-
-const F_A = "F/A";
-const A_F = "A/F";
-const P_A = "P/A";
-const A_P = "A/P";
-
-const A_G = "A/G";
-const P_G = "P/G";
-
-const P_AG = "P/AG";
-
 exports.getObjCallback = function(res, err, output) {
   if (err) {
     res.send(errMsg);
@@ -25,85 +12,81 @@ exports.getObjCallback = function(res, err, output) {
   }
 };
 
-exports.calcRatio = function(jsonData) {
-  type = jsonData["type"];
-  interest = jsonData["interest"];
-  period = jsonData["period"];
-
+exports.calcRatio = function(type, interest, period, geometric = 0) {
   switch(type) {
-    case "F/P":
+    case "P_to_F":
       return P_to_F(interest, period);
-    case "P/F":
+    case "F_to_P":
       return F_to_P(interest, period);
 
-    case "F/A":
+    case "A_to_F":
       return A_to_F(interest, period);
-    case "A/F":
+    case "F_to_A":
       return F_to_A(interest, period);
-    case "P/A":
+    case "A_to_P":
       return A_to_P(interest, period);
-    case "A/P":
+    case "P_to_A":
       return P_to_A(interest, period);
 
-    case "A/G":
+    case "G_to_A":
       return G_to_A(interest, period);
-    case "P/G":
+    case "G_to_P":
       return G_to_P(interest, period);
 
-    case "P/AG":
-      return GA_to_P(interest, jsonData["geometric"], period);
+    case "GA_to_P":
+      return GA_to_P(interest, geometric, period);
   }
-}
+};
 
 function P_to_F(i, n) {
   return Math.pow(1 + i, n);
-}
+};
 
 function F_to_P(i, n) {
   return Math.pow(1 + i, -n);
-}
+};
 
 function F_to_A(i, n) {
-  top = Math.pow(1 + i, n) - 1;
-  bot = i;
-
-  return top/bot;
-}
-
-function A_to_F(i, n) {
   top = i;
   bot = Math.pow(1 + i, n) - 1;
 
   return top/bot;
-}
+};
 
-function P_to_A(i, n) {
+function A_to_F(i, n) {
   top = Math.pow(1 + i, n) - 1;
-  bot = i*Math.pow(1 + i, n);
+  bot = i;
 
   return top/bot;
-}
+};
 
-function A_to_P(i, n) {
+function P_to_A(i, n) {
   top = i*Math.pow(1 + i, n);
   bot = Math.pow(1 + i, n) - 1;
 
   return top/bot;
-}
+};
+
+function A_to_P(i, n) {
+  top = Math.pow(1 + i, n) - 1;
+  bot = i*Math.pow(1 + i, n);
+
+  return top/bot;
+};
 
 function G_to_A(i, n) {
   top = Math.pow(1 + i, n) - i*n - 1;
   bot =i*Math.pow(1 + i, n) - i;
 
   return top/bot;
-}
+};
 
 function G_to_P(i, n) {
   top = Math.pow(1 + i, n) - i*n - 1;
   bot = i*i*Math.pow(1 + i, n);
 
   return top/bot;
-}
+};
 
 function GA_to_P(i, g, n) {
   if (i == g) {
@@ -115,10 +98,10 @@ function GA_to_P(i, g, n) {
 
     return top/bot;
   }
-}
+};
 
 function pruneArray(arr) {
   arr.forEach(entry => {
     delete(entry["_id"]);
   });
-}
+};

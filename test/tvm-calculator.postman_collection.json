@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "59edf028-1066-4346-9ebb-a1297746d791",
+		"name": "tvm-calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Present to Future",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/P_to_F/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"P_to_F",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Future to Present",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/F_to_P/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"F_to_P",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Annuity to Future",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/A_to_F/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"A_to_F",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Future to Annuity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/F_to_A/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"F_to_A",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Annuity to Present",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/A_to_P/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"A_to_P",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Present to Annuity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/P_to_A/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"P_to_A",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gradient to Annuity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/G_to_A/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"G_to_A",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gradient to Present",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/G_to_P/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"G_to_P",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Geometric Gradient to Present",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3030/GA_to_P/100/10/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"GA_to_P",
+						"100",
+						"10",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
