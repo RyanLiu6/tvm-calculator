@@ -1,4 +1,4 @@
-# TVMCalculator (WIP)
+# TVMCalculator
 Ever had to take a course on Engineering Economics? I never knew it even existed until I took a mandatory course at UBC. I found it troublesome to always be calculating the ratios by hand and created an api (To be completed Web and Android applications) to complete the calculations for you instead!
 
 Introducing .... TVMCalculator!
