@@ -9,6 +9,7 @@ Introducing .... TVMCalculator!
 ## Tests
 Automatable tests have been included under /tests and use Postman to automate testing for the api. Import the file into Postman and modify the parameters as required. Below I have listed the different possible calculations and what the parameters indicate. 
 
+
 |                  Type                  | URL     |
 |:--------------------------------------:|---------|
 | Present to Future (F/P)                | P_to_F  |
@@ -20,3 +21,9 @@ Automatable tests have been included under /tests and use Postman to automate te
 | Gradient to Annuity (A/G)              | G_to_A  |
 | Gradient to Present (P/G)              | G_to_P  |
 | Geometric Gradient to Present (P/G, g) | GA_to_P |
+_Table 1: Table of URLS_
+
+![List](images/list.png)
+
+
+![Example URL](images/present to future.png)
