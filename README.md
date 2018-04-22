@@ -6,14 +6,17 @@ Introducing .... TVMCalculator!
 ## What it does
 // TODO
 
-## Tests
-Automatable tests have been included under /tests and use Postman to automate testing for the api. Import the file into Postman and modify the parameters as required. Below I have listed the different possible calculations and what the parameters indicate. 
+## Usage
+### API
+Below in Table 1 are the possible API Calls one can make.
 
-![List](images/list.png)
+API calls must be made in the format of:
 
-_Figure 1: Comprehensive list of all possible calculations_
+**Server URL + /Table URL + /Monetary Value + /Interest Rate (Percentage) + /Periods (Year) + /Geometric Growth (Optional**
 
-Listed above are all possible calculations, and refer to Table 1 and Figure 2 for a list and an example.
+**NOTE: Current Server has yet to be deployed, will update once it is done**
+
+Please refer to Figure 1 an example.
 
 |                  Type                  | URL     |
 |:--------------------------------------:|---------|
@@ -29,10 +32,13 @@ Listed above are all possible calculations, and refer to Table 1 and Figure 2 fo
 
 _Table 1: Table of URLs_
 
-Table listed the possible URL attachments, but to actually access the API, you must make a call in the format of:
-
-**Server URL + /Table URL + /Monetary Value + /Interest Rate (Percentage) + /Periods (Year) + /Geometric Growth (Optional**
-
 ![Example URL](images/example.png)
 
-_Figure 2: Example of Placing $100 in the bank at 10% interest for 5 years or 100(F/P, 10%, 5)_
+_Figure 1: Example of Placing $100 in the bank at 10% interest for 5 years or 100(F/P, 10%, 5)_
+
+## Tests
+Automatable tests have been included under /tests and use Postman to automate testing for the api. Import the file into Postman and modify the parameters as required. As mentioned above, all requests have their format already set, and you can change the values as you need to make your own calculations as needed. Please refer to the Usage section to understand how to call the API. 
+
+![List](images/list.png)
+
+_Figure 2: Comprehensive list of all possible calculations done using Postman_
