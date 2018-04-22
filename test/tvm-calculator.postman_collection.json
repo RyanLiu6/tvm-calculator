@@ -196,7 +196,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:3030/GA_to_P/100/10/5",
+					"raw": "http://localhost:3030/GA_to_P/100/10/5/5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -206,6 +206,7 @@
 						"GA_to_P",
 						"100",
 						"10",
+						"5",
 						"5"
 					]
 				}

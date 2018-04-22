@@ -27,7 +27,8 @@ module.exports = function(app, db) {
 
     var result = {};
     if (req.params.geometric) {
-      result.ratio = Number(Utils.calcRatio(type, i, n, geometric)).toFixed(2);
+      const geo = req.params.geometric/100;
+      result.ratio = Number(Utils.calcRatio(type, i, n, geo)).toFixed(2);
     }
     else {
       result.ratio = Number(Utils.calcRatio(type, i, n)).toFixed(2);
