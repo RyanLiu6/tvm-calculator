@@ -3,10 +3,10 @@ Ever had to take a course on Engineering Economics? I never knew it even existed
 
 Introducing .... TVMCalculator!
 
-# What it does
+## What it does
 // TODO
 
-# Tests
+## Tests
 Automatable tests have been included under /tests and use Postman to automate testing for the api. Import the file into Postman and modify the parameters as required. Below I have listed the different possible calculations and what the parameters indicate. 
 
 // TODO
