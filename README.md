@@ -8,11 +8,13 @@ Introducing .... TVMCalculator!
 
 ## Usage
 ### API
-Below in Table 1 are the possible API Calls one can make.
+Below in Table 1 are the possible API Calls one can make and API calls must be made in the format of:
 
-API calls must be made in the format of:
+**Server URL + /Table URL + /Monetary Value + /Interest Rate (Percentage) + /Period (Year)**
 
-**Server URL + /Table URL + /Monetary Value + /Interest Rate (Percentage) + /Periods (Year) + /Geometric Growth (Optional**
+One special operation / calculation has been added, which is the Geometric Gradient. For that, the format is:
+
+**Server URL + /Table URL + /Monetary Value + /Interest Rate + /Period + /Geometric Rate**
 
 **NOTE: Current Server has yet to be deployed, will update once it is done**
 
