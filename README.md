@@ -10,6 +10,7 @@ Introducing .... TVMCalculator!
 Automatable tests have been included under /tests and use Postman to automate testing for the api. Import the file into Postman and modify the parameters as required. Below I have listed the different possible calculations and what the parameters indicate. 
 
 ![List](images/list.png)
+
 _Figure 1: Comprehensive list of all possible calculations_
 
 Listed above are all possible calculations, and refer to Table 1 and Figure 2 for a list and an example.
@@ -25,10 +26,13 @@ Listed above are all possible calculations, and refer to Table 1 and Figure 2 fo
 | Gradient to Annuity (A/G)              | G_to_A  |
 | Gradient to Present (P/G)              | G_to_P  |
 | Geometric Gradient to Present (P/G, g) | GA_to_P |
+
 _Table 1: Table of URLs_
 
 Table listed the possible URL attachments, but to actually access the API, you must make a call in the format of:
+
 **Server URL + /Table URL + /Monetary Value + /Interest Rate (Percentage) + /Periods (Year) + /Geometric Growth (Optional**
 
 ![Example URL](images/example.png)
+
 _Figure 2: Example of Placing $100 in the bank at 10% interest for 5 years or 100(F/P, 10%, 5)_
