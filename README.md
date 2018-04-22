@@ -16,9 +16,10 @@ One special operation / calculation has been added, which is the Geometric Gradi
 
 **Server URL + /Table URL + /Monetary Value + /Interest Rate + /Period + /Geometric Rate**
 
+
 **NOTE: Current Server has yet to be deployed, will update once it is done**
 
-Please refer to Figure 1 an example.
+Please refer to Figure 1 for an example.
 
 |                  Type                  | URL     |
 |:--------------------------------------:|---------|
