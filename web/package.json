@@ -1,0 +1,26 @@
+{
+  "name": "tvm-calculator",
+  "version": "1.0.0",
+  "description": "Time Value of Money Calculator",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanLiu6/tvm-calculator.git"
+  },
+  "author": "ryanliu6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanLiu6/tvm-calculator/issues"
+  },
+  "homepage": "https://github.com/RyanLiu6/tvm-calculator#readme",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
+}
