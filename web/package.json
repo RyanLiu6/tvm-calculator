@@ -1,26 +1,40 @@
 {
-  "name": "tvm-calculator",
-  "version": "1.0.0",
-  "description": "Time Value of Money Calculator",
-  "main": "main.js",
-  "directories": {
-    "test": "tests"
+  "name": "tvm",
+  "version": "0.1.0",
+  "author": "ryanliu6",
+  "main": "public/main.js",
+  "homepage": "./",
+  "private": true,
+  "dependencies": {
+    "electron-is-dev": "^0.3.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "elec": "electron .",
+    "elec -dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pre-elec": "yarn build",
+    "elec-build": "build -c.extraMetadata.main=build/main.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RyanLiu6/tvm-calculator.git"
-  },
-  "author": "ryanliu6",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RyanLiu6/tvm-calculator/issues"
-  },
-  "homepage": "https://github.com/RyanLiu6/tvm-calculator#readme",
   "devDependencies": {
-    "electron": "^2.0.2"
+    "concurrently": "^3.6.0",
+    "electron": "^2.0.3",
+    "electron-builder": "^20.18.0",
+    "wait-on": "^2.1.0"
+  },
+  "build": {
+    "appId": "com.tvm",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
